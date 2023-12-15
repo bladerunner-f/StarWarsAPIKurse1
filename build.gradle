@@ -35,10 +35,10 @@ javafx {
     modules = ['javafx.controls', 'javafx.fxml']
 }
 
-/*extraJavaModuleInfo {
+extraJavaModuleInfo {
     failOnMissingModuleInfo.set(false)
     module('commons-math3-3.6.1.jar', 'commons.math3', '3.6.1')
-}*/
+}
 
 sourceSets {
     main.java.srcDir "src/main/java"
@@ -66,7 +66,7 @@ jar {
 dependencies {
 
     // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
-    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '3.0.0'
+    implementation group: 'io.rest-assured', name: 'rest-assured', version: '3.0.0'
 
 
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind

@@ -1,13 +1,11 @@
 package org.example;
-import java.util.Scanner;
-import java.util.HashMap;
-import java.util.Map;
 
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.restassured.response.Response;
+import io.restassured.RestAssured;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class StarWarsInfoApp {
 
