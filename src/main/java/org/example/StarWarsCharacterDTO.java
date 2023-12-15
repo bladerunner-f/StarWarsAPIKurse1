@@ -12,6 +12,12 @@ public class StarWarsCharacterDTO extends DTO{
     private String height;
     @JsonProperty ("mass")
     private String mass;
+
+    @JsonProperty ("gender")
+    private String gender;
+
+    @JsonProperty ("birth_year")
+    private String birth_year;
     public StarWarsCharacterDTO() {
         // пустой конструктор
     }
@@ -40,6 +46,26 @@ public class StarWarsCharacterDTO extends DTO{
     @JsonProperty("mass")
     public void setMass() {
         this.mass = mass;
+    }
+
+    @JsonProperty("gender")
+    public String getGender() {
+        return gender;
+    }
+
+    @JsonProperty("gender")
+    public void setGender() {
+        this.gender = gender;
+    }
+
+    @JsonProperty("birth_year")
+    public String getBirth_year() {
+        return birth_year;
+    }
+
+    @JsonProperty("birth_year")
+    public void setBirth_year() {
+        this.birth_year = birth_year;
     }
 
 }

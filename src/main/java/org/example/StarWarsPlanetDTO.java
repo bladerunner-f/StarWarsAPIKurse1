@@ -6,6 +6,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StarWarsPlanetDTO extends DTO{
     @JsonProperty ("name")
     private String name;
+
+    @JsonProperty ("diameter")
+    private String diameter;
+
+    @JsonProperty ("population")
+    private String population;
+
+    @JsonProperty ("gravity")
+    private String gravity;
+
+    @JsonProperty ("terrain")
+    private String terrain;
+
+
     public StarWarsPlanetDTO() {
         // пустой конструктор
     }
@@ -18,5 +32,40 @@ public class StarWarsPlanetDTO extends DTO{
         this.name = name;
     }
 
+    @JsonProperty("diameter")
+    public String getDiameter() {
+        return diameter;
+    }
+    @JsonProperty("diameter")
+    public void setDiameter(String diameter) {
+        this.diameter = diameter;
+    }
+
+    @JsonProperty("population")
+    public String getPopulation() {
+        return population;
+    }
+    @JsonProperty("population")
+    public void setPopulation(String population) {
+        this.population = population;
+    }
+
+    @JsonProperty("gravity")
+    public String getGravity() {
+        return gravity;
+    }
+    @JsonProperty("gravity")
+    public void setGravity(String gravity) {
+        this.gravity = gravity;
+    }
+
+    @JsonProperty("terrain")
+    public String getTerrain() {
+        return terrain;
+    }
+    @JsonProperty("terrain")
+    public void setTerrain(String terrain) {
+        this.terrain = terrain;
+    }
 }
 

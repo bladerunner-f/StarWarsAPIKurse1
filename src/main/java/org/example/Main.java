@@ -23,12 +23,14 @@ public class Main {
         reqRes.put("Оби-Ван Кеноби", "10");
         reqRes.put("Оби-Ван", "10");
         reqRes.put("Obi-Wan Kenobi", "10");
-        reqRes.put("Tatooine", "1");
-        reqRes.put("DS-1 Orbital Battle Station", "9");
+        reqRes.put("Dagobah", "5");
+        reqRes.put("дагоба", "5");
+        reqRes.put("Дагоба", "5");
+        reqRes.put("Bespin", "6");
+        reqRes.put("Беспин", "6");
+        reqRes.put("беспин", "6");
         reqRes.put("Звезда смерти", "9");
         reqRes.put("Death Star", "9");
-        reqRes.put("Сокол Тысячелетия", "10");
-        reqRes.put("Millennium Falcon", "10");
 
         do {
             System.out.println("\n\n          Консоль запросов к сервису Star Wars API");
@@ -45,7 +47,7 @@ public class Main {
 
                 switch (input){
                     case "1":
-                        System.out.println("Список доступных категорий : " + "people, planets, vehicles, starships");
+                        System.out.println("Список доступных категорий : " + "people, planets, starships");
                         break;
                     case "2":
                         System.out.println("Список доступных запросов: " + reqRes.keySet());
@@ -62,12 +64,18 @@ public class Main {
                             case "planets":
                                 StarWarsPlanetDTO planet = (StarWarsPlanetDTO) StarWarsInfoApp.Info(category, reqRes.get(i1));
                                 System.out.println("Название: " + planet.getName());
+                                System.out.println("Численность населения: " + planet.getPopulation());
+                                System.out.println("Гравитация (g): " + planet.getGravity());
+                                System.out.println("Местность: " + planet.getTerrain());
+                                System.out.println("Диаметр: " + planet.getDiameter());
                                 break;
                             case "people":
                                 StarWarsCharacterDTO hero = (StarWarsCharacterDTO) StarWarsInfoApp.Info(category, reqRes.get(i1));
                                 System.out.println("Имя: " + hero.getName());
                                 System.out.println("Рост: " + hero.getHeight());
                                 System.out.println("Вес: " + hero.getMass());
+                                System.out.println("Пол: " + hero.getGender());
+                                System.out.println("Год рождения: " + hero.getBirth_year());
                                 break;
                             case "starships":
                                 StarWarsStarshipsDTO starship = (StarWarsStarshipsDTO) StarWarsInfoApp.Info(category, reqRes.get(i1));
