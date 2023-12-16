@@ -25,6 +25,12 @@ public class StarWarsInfoApp {
         }
 
 
+    /**
+     * Проверяет что - то
+     * @param category
+     * @param name
+     * @return
+     */
         public static DTO Info(String category, String name){
             String url = "https://swapi.dev/api/" + category + "/" +  name + "/";
             switch (category) {
