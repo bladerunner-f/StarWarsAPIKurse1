@@ -16,7 +16,7 @@ public class Main {
 
         //logger.info("Starting program...");
 
-        boolean a = true;
+        boolean running = true;
 
         Map<String, String> reqRes = new HashMap<String, String>();
         reqRes.put("Luke Skywalker", "1");
@@ -93,7 +93,7 @@ public class Main {
                         }
                         break;
                     case "4":
-                        a = false;
+                        running = false;
                         break;
                 }
 
@@ -101,6 +101,6 @@ public class Main {
                 throw new RuntimeException(e);
             }
         }
-        while (a);
+        while (running);
     }
 }
